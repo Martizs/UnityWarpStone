@@ -34,6 +34,9 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField]
     bool collisionsEnabled = true;
 
+    [SerializeField]
+    GameObject endMenuCanvas;
+
     private void Start()
     {
         warpStoneAudio = GetComponent<AudioSource>();
@@ -112,8 +115,13 @@ public class CollisionHandler : MonoBehaviour
         }
         else
         {
-            Application.Quit();
+            ShowEndMenu();
         }
+    }
+
+    void ShowEndMenu()
+    {
+        endMenuCanvas.SetActive(true);
     }
 
     private void Delayed(string methodName, float delay)
