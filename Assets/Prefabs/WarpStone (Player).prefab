@@ -290,7 +290,7 @@ MonoBehaviour:
   finishDelay: 4
   crashSound: {fileID: 8300000, guid: 4cb13ad42bfbb614ca63af6f63508cdf, type: 3}
   crashVolume: 0.1
-  finishSound: {fileID: 8300000, guid: a2a20af3ab90c5640b52483ea7384dbc, type: 3}
+  finishSound: {fileID: 8300000, guid: 38a30f6497a9614419ef1f80221fd3d4, type: 3}
   finishVolume: 0.5
   collisionsEnabled: 1
 --- !u!114 &1032682178
