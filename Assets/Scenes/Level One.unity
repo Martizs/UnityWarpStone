@@ -641,15 +641,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.262761
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.189419
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.1458817
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -657,15 +657,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8937229025773318687, guid: b18b95dbc4cc84242918c07beb6fe16c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5981,9 +5981,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 912093705, guid: dbae7389d37affd47af35ec802b0c418, type: 3}
-      propertyPath: endMenuCanvas
-      value: 
+    - target: {fileID: 1961835383, guid: dbae7389d37affd47af35ec802b0c418, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2830987723928916450, guid: dbae7389d37affd47af35ec802b0c418, type: 3}
       propertyPath: m_RootOrder
