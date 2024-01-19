@@ -87,7 +87,6 @@ public class CollisionHandler : MonoBehaviour
         isTransitioning = true;
         warpStoneAudio.PlayOneShot(crashSound, crashVolume);
         crashParticles.Play();
-        // add particle effect
         Delayed("ReloadScene", crashDelay);
     }
 

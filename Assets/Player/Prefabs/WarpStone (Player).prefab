@@ -960,7 +960,6 @@ GameObject:
   - component: {fileID: 2830987723928916448}
   - component: {fileID: 912093704}
   - component: {fileID: 912093705}
-  - component: {fileID: 1032682178}
   m_Layer: 0
   m_Name: WarpStone (Player)
   m_TagString: Player
@@ -1158,18 +1157,6 @@ MonoBehaviour:
   finishVolume: 0.5
   collisionsEnabled: 1
   endMenuCanvas: {fileID: 1961835383}
---- !u!114 &1032682178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2830987723928916452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32f7ad83fca75c74fa9f0a2644a6f1c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6672083525866345697
 GameObject:
   m_ObjectHideFlags: 0
