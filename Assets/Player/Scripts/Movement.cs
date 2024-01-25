@@ -10,7 +10,9 @@ public class Movement : MonoBehaviour
     AudioSource warpStoneAudio;
 
     [SerializeField]
-    float speed = 1000f;
+    float initialSpeed = 1000f;
+
+    float speed;
 
     [SerializeField]
     float rotationSpeed = 100f;
@@ -26,19 +28,35 @@ public class Movement : MonoBehaviour
     private string priorityRotationKey = null;
 
     [SerializeField]
-    ParticleSystem mainThrust;
+    ParticleSystem[] mainThrusts;
 
     [SerializeField]
-    ParticleSystem leftThrust;
+    float warpVFXSpeedIncrease = .5f;
 
     [SerializeField]
-    ParticleSystem rightThrust;
+    float speedIncrease = .5f;
+
+    float initialWarpSpeed = 1f;
+
+    ParticleSystem.MainModule[] mainThrustModules;
 
     // Start is called before the first frame update
     void Start()
     {
         warpStoneAudio = GetComponent<AudioSource>();
         warpStoneBody = GetComponent<Rigidbody>();
+
+        mainThrustModules = new ParticleSystem.MainModule[mainThrusts.Length];
+
+        for (int i = 0; i < mainThrusts.Length; i++)
+        {
+            mainThrustModules[i] = mainThrusts[i].main;
+        }
+
+        // Doing this with the one since both should have the same speed
+        initialWarpSpeed = mainThrustModules[0].simulationSpeed;
+
+        speed = initialSpeed;
     }
 
     // Update is called once per frame
@@ -64,33 +82,62 @@ public class Movement : MonoBehaviour
     private void StartThrusting()
     {
         // Can use warpSoneAudio.isPLaying() && mainThrust.IsPlaying to reach a similar effect
-        // but seems like using our own boolean value is a bit more concise
+        // but seems like using our own boolean value is a bit more conciseaa
         if (!thrusting)
         {
             warpStoneAudio.PlayOneShot(warpSound);
-            mainThrust.Play();
+            StartPlayingThrusters();
             thrusting = true;
         }
+
+        IncreaseThrusterSpeed();
+
+        speed += speedIncrease * Time.deltaTime;
+
         warpStoneBody.AddRelativeForce(Vector3.up * Time.deltaTime * speed);
     }
 
-    private void StopThrusting()
+    private void StartPlayingThrusters()
     {
+        foreach (ParticleSystem mainThrust in mainThrusts)
+        {
+            mainThrust.Play();
+        }
+    }
+
+    private void IncreaseThrusterSpeed()
+    {
+        for (int i = 0; i < mainThrustModules.Length; i++)
+        {
+            mainThrustModules[i].simulationSpeed += warpVFXSpeedIncrease * Time.deltaTime;
+        }
+    }
+
+    private void StopPlayingThrusters()
+    {
+        for (int i = 0; i < mainThrustModules.Length; i++)
+        {
+            mainThrustModules[i].simulationSpeed = initialWarpSpeed;
+            mainThrusts[i].Stop();
+        }
+    }
+
+    public void StopThrusting()
+    {
+        StopPlayingThrusters();
         warpStoneAudio.Stop();
-        mainThrust.Stop();
+        speed = initialSpeed;
         thrusting = false;
     }
 
     void stopLeftRotaion()
     {
         rotatingLeft = false;
-        rightThrust.Stop();
     }
 
     void stopRightRotation()
     {
         rotatingRight = false;
-        leftThrust.Stop();
     }
 
     void ProcessRotation()
@@ -122,7 +169,6 @@ public class Movement : MonoBehaviour
     {
         if (!rotatingLeft)
         {
-            rightThrust.Play();
             rotatingLeft = true;
 
             if (rotatingRight)
@@ -138,7 +184,6 @@ public class Movement : MonoBehaviour
     {
         if (!rotatingRight)
         {
-            leftThrust.Play();
             rotatingRight = true;
 
             if (rotatingLeft)

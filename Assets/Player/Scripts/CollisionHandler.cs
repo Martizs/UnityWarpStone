@@ -37,9 +37,12 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField]
     GameObject endMenuCanvas;
 
+    Movement movement;
+
     private void Start()
     {
         warpStoneAudio = GetComponent<AudioSource>();
+        movement = GetComponent<Movement>();
     }
 
     void Update()
@@ -71,11 +74,11 @@ public class CollisionHandler : MonoBehaviour
                     Debug.Log("Bumped into friendly");
                     break;
                 case "Finish":
-                    warpStoneAudio.Stop();
+                    movement.StopThrusting();
                     OnNextScene();
                     break;
                 default:
-                    warpStoneAudio.Stop();
+                    movement.StopThrusting();
                     OnCrash();
                     break;
             }
