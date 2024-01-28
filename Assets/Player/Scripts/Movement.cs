@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+// Notes
+// Good asset packs - https://assetstore.unity.com/packages/3d/environments/urban/city-package-107224
+// https://assetstore.unity.com/packages/3d/vehicles/land/uaa-city-props-vehicles-120339
+
 public class Movement : MonoBehaviour
 {
     const string PRIORITY_LEFT = "left";
