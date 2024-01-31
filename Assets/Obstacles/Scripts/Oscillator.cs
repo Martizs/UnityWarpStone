@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// NOTE: Follow this for aura effect - .
 public class Oscillator : MonoBehaviour
 {
     // So this is one complete cycle
