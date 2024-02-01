@@ -16,18 +16,6 @@ public class Oscillator : MonoBehaviour
     [SerializeField]
     float period = 2f;
 
-    [SerializeField]
-    float shakeSpeed = 1f;
-
-    [SerializeField]
-    float shakeAmount = 1f;
-
-    [SerializeField]
-    float shakeRotateSpeed = 1f;
-
-    [SerializeField]
-    Vector3 shakeRotateVector;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +26,6 @@ public class Oscillator : MonoBehaviour
     void Update()
     {
         ObstacleMovement();
-        Shake();
-        RotationShake();
     }
 
     void ObstacleMovement()
@@ -54,19 +40,5 @@ public class Oscillator : MonoBehaviour
 
         Vector3 offset = movementVector * movementFactor;
         transform.position = startingPosition + offset;
-    }
-
-    void Shake()
-    {
-        transform.position = new Vector3(
-            transform.position.x,
-            transform.position.y + Mathf.Sin(Time.time * shakeSpeed) * shakeAmount,
-            transform.position.z
-        );
-    }
-
-    void RotationShake()
-    {
-        transform.Rotate(shakeRotateVector * Mathf.Sin(Time.time * shakeRotateSpeed));
     }
 }
