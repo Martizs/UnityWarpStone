@@ -3,10 +3,10 @@ using UnityEngine;
 public class Spinning : MonoBehaviour
 {
     [SerializeField]
-    float spinSpeed = 100f;
+    float spinSpeed = 0f;
 
     [SerializeField]
-    bool reverse = false;
+    Vector3 spinVector;
 
     // Start is called before the first frame update
     void Start() { }
@@ -14,6 +14,9 @@ public class Spinning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate((reverse ? Vector3.back : Vector3.forward) * Time.deltaTime * spinSpeed);
+        if (spinSpeed != 0)
+        {
+            transform.Rotate(spinVector * Time.deltaTime * spinSpeed);
+        }
     }
 }
