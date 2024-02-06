@@ -3970,3 +3970,76 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &5539008176750430855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 505555785351314831, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505555785351314831, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 505555785351314831, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 505555785351314831, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_VertexStreams.Array.data[3]
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 260.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 48.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269437965456028797, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452482933953139278, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
+      propertyPath: m_Name
+      value: ForceFieldVFX2D
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a524e4392e2189f45ab9c116fff202a7, type: 3}
